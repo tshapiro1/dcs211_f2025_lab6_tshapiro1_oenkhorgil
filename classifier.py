@@ -51,12 +51,18 @@ train = [
     ('He took out the trash and hit every customer on his way, he even drop a table on a customer. Disappointed of the service.', 'negative'),
     
     # Neutral reviews
-    ('The food was okay, nothing special.', 'neutral'),
-    ('It was decent, I might come back.', 'neutral'),
-    ('Average restaurant, not bad but not great.', 'neutral'),
-    ('The meal was acceptable, prices were fair.', 'neutral'),
-    ('Standard diner food, what you would expect.', 'neutral'),
-    ('It was fine, service was average.', 'neutral'),
+    ('The food was delivered', 'neutral'),
+    ('It is located next to a bank.', 'neutral'),
+    ('They have fish tacos', 'neutral'),
+    ('They have a wall covered with magazines.', 'neutral'),
+    ('They have booths and chairs as seating', 'neutral'),
+    ('The pizza came with fries', 'neutral'),
+    ('The restaurant is on Main street', 'neutral'),
+    ('There is an option to add vegetables.', 'neutral'),
+    ('The soup has potato and peas', 'neutral'),
+    ('The dessert included ice cream', 'neutral'),
+    ('There is a window next to the cashier', 'neutral'),
+    ('The dessert included pudding', 'neutral')
 ]
 
 # Step 2: Create the classifier with training data
