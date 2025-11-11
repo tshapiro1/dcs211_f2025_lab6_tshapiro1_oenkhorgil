@@ -21,23 +21,19 @@ train = [
     ('There is a soda fountain with so many drink options. And their fries are just the best you can get.', 'positive'),
     ('I’m so glad I gave this place a try. The service was great and the food was delicious.', 'positive'),
     ('Food tasted great and the dessert was unexpectedly yummy.', 'positive'),
-    ('I only tried this place because I was given a gift card.', 'neutral'),
-    ("The steaks and burger came out med-rare instead of medium, my kids dont like to see too much blood", "negative"),
-    ("I had to wait for a long time to get my food, the cashier was not even looking at me, he was just talking to his friend.", "negative"),
     ("The servers are welcoming and always made me feel invited.", "positive"),
-    ("Overall, the sushi was decent.", "neutral"),
     ("Great sushi, clean place, very quiet set up inside", "positive"),
-    ("The fish was fresh and the sushi was delicious. The only downside was the price.", "neutral"),
     ("The owners make you feel like family and make sure you have the best service and food.", "positive"),
     ("The sashimi was fresh and very refreshing.", "positive"),
-    ("The sushi was good, but the service was slow.", "neutral"),
     ("It was in such a nice venue, the environment was clean and had such a pleasing atmosphere to it.", "positive"),
-    ("The burrito was not good, the sauce was too sweet and the rice was not cooked well.", "negative"),
-    ("It's a pretty straightforward ordering process as well where you queue and order, and basically just wait a while.", "neutral"),
     ("One of the best tacos I've had in a while.", "positive"),
     ("The whole vibe of the store is worthy, the service was amazing so friendly, professional, and quick. ", "positive"),
+    
+    # Negative reviews
     ("There was hair in the food, the salsa was not good, and the chips were not fresh.", "negative"),
-     # Negative reviews
+    ("The steaks and burger came out med-rare instead of medium, my kids dont like to see too much blood", "negative"),
+    ("I had to wait for a long time to get my food, the cashier was not even looking at me, he was just talking to his friend.", "negative"),
+    ("The burrito was not good, the sauce was too sweet and the rice was not cooked well.", "negative"),
     ('This restaurant is terrible.', 'negative'),
     ('Worst meal ever, never coming back.', 'negative'),
     ('The food was cold and bland.', 'negative'),
@@ -51,6 +47,11 @@ train = [
     ('He took out the trash and hit every customer on his way, he even drop a table on a customer. Disappointed of the service.', 'negative'),
     
     # Neutral reviews
+    ('I only tried this place because I was given a gift card.', 'neutral'),
+    ("Overall, the sushi was decent.", "neutral"),
+    ("The fish was fresh and the sushi was delicious. The only downside was the price.", "neutral"),
+    ("The sushi was good, but the service was slow.", "neutral"),
+    ("It's a pretty straightforward ordering process as well where you queue and order, and basically just wait a while.", "neutral"),
     ('The food was delivered', 'neutral'),
     ('It is located next to a bank.', 'neutral'),
     ('They have fish tacos', 'neutral'),
@@ -69,14 +70,21 @@ train = [
 cl = NaiveBayesClassifier(train)
 
 # Step 3: Test the classifier
-print("Testing the Basic Classifier:")
-test_review = input("Enter a review to classify: ")
-result = cl.classify(test_review)
-print(f"Review: '{test_review}'")
-print(f"Classification: {result}")
+print("Restaurant Review Classifier")
 print()
 
-test_review2 = input("Enter a review to classify: ")
-result2 = cl.classify(test_review2)
-print(f"Review: '{test_review2}'")
-print(f"Classification: {result2}")
+another_review = 'yes'
+
+while another_review.lower() == 'yes':
+    # Get review from user
+    test_review = input("Enter a review to classify: ")
+    
+    # Classify and display result
+    result = cl.classify(test_review)
+    print(f"Review: '{test_review}'")
+    print(f"Classification: {result}")
+    print()
+    
+    # Ask if they want to enter another review
+    another_review = input("Would you like to enter another review? (yes/no): ")
+    print()
