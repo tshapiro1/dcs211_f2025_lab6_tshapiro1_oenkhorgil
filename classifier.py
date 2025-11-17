@@ -28,6 +28,13 @@ train = [
     ("It was in such a nice venue, the environment was clean and had such a pleasing atmosphere to it.", "positive"),
     ("One of the best tacos I've had in a while.", "positive"),
     ("The whole vibe of the store is worthy, the service was amazing so friendly, professional, and quick. ", "positive"),
+    ('So good!', 'positive'),
+    ('Love it!', 'positive'),
+    ('Incredible experience from start to finish.', 'positive'),
+    ('The ingredients were fresh and perfectly seasoned.', 'positive'),
+    ('Cannot recommend this place enough!', 'positive'),
+    ('Five stars all the way!', 'positive'),
+    ('Delicious and worth every penny.', 'positive'),
     
     # Negative reviews
     ("There was hair in the food, the salsa was not good, and the chips were not fresh.", "negative"),
@@ -47,6 +54,16 @@ train = [
     ('He took out the trash and hit every customer on his way, he even drop a table on a customer. Disappointed of the service.', 'negative'), 
     ('Everything is bad. Dont go.', 'negative'), 
     ('I was disgusted', 'negative'),
+    ('Disappointing meal, expected much better.', 'negative'),
+    ('The portions were tiny and overpriced.', 'negative'),
+    ('Way too greasy, felt sick after.', 'negative'),
+    ('Stale bread and bland soup.', 'negative'),
+    ('Mediocre at best, waste of time.', 'negative'),
+    ('The fish smelled off, did not eat it.', 'negative'),
+    ('Rude staff and dirty tables.', 'negative'),
+    ('Never again, horrible quality.', 'negative'),
+    ('Too salty and burnt.', 'negative'),
+    ('Not fresh at all, very old ingredients.', 'negative'),
     
     # Neutral reviews
     ('I only tried this place because I was given a gift card.', 'neutral'),
@@ -65,7 +82,17 @@ train = [
     ('The soup has potato and peas', 'neutral'),
     ('The dessert included ice cream', 'neutral'),
     ('There is a window next to the cashier', 'neutral'),
-    ('The dessert included pudding', 'neutral')
+    ('The dessert included pudding', 'neutral'),
+    ("It's okay, nothing special.", 'neutral'),
+    ('Average food, average price.', 'neutral'),
+    ('The food was good but the service was slow.', 'neutral'),
+    ('Decent burgers, small parking lot.', 'neutral'),
+    ('Meh, probably won\'t come back.', 'neutral'),
+    ('Solid choice if you\'re in the area.', 'neutral'),
+    ('The decor was nice but the food was just okay.', 'neutral'),
+    ('Quick service but nothing memorable.', 'neutral'),
+    ('They offer takeout and delivery.', 'neutral'),
+    ('Standard diner food, typical prices.', 'neutral'),
 ]
 
 # Step 2: Create the classifier with training data
