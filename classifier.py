@@ -44,7 +44,9 @@ train = [
     ('Would not recommend, complete waste of money.', 'negative'),
     ('I felt ripped off. The French fries were too salty and cooked in burnt oil.', 'negative'),
     ('The cashier was rude and careless. He didn’t even bother to speak, everything was on signs.', 'negative'),
-    ('He took out the trash and hit every customer on his way, he even drop a table on a customer. Disappointed of the service.', 'negative'),
+    ('He took out the trash and hit every customer on his way, he even drop a table on a customer. Disappointed of the service.', 'negative'), 
+    ('Everything is bad. Dont go.', 'negative'), 
+    ('I was disgusted', 'negative'),
     
     # Neutral reviews
     ('I only tried this place because I was given a gift card.', 'neutral'),
@@ -81,8 +83,14 @@ while another_review.lower() == 'yes':
     
     # Classify and display result
     result = cl.classify(test_review)
+    
+    # Get probability distribution for confidence
+    prob_dist = cl.prob_classify(test_review)
+    confidence = round(prob_dist.prob(result), 2)
+    
     print(f"Review: '{test_review}'")
     print(f"Classification: {result}")
+    print(f"Confidence: {confidence * 100}%")
     print()
     
     # Ask if they want to enter another review
